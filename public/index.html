@@ -109,12 +109,12 @@
   var form = document.getElementById("form");
   var input = document.getElementById("input");
 
-  var package = {
-    timestamp: Date.now(),
-    sId: sId,
-    rId: rId,
-    msg: msg
-  }
+  // var package = {
+  //   timestamp: Date.now(),
+  //   sId: sId,
+  //   rId: rId,
+  //   msg: msg
+  // }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -132,7 +132,7 @@
   // });
 
   //get data from socket and show all data by using table
-  socket.on('chat message',(msgPack)=>{
+  socket.on('get message',(msgPack)=>{
     var x=document.getElementById('tableDetail').insertRow(0);
     var timestamp = x.insertCell(0);
     var mId = x.insertCell(1);

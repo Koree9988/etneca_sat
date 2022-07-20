@@ -26,6 +26,9 @@ io.on('connection', (socket) => {
         port.write('chat,'+Date.now()+',sid01,'+'rid01,'+msg)
         console.log('chat,'+Date.now()+',sid01,'+'rid01,'+msg)
     });
+    socket.on('get message', (msg) => {
+        
+    });
 
     socket.broadcast.emit('hi');
 });
@@ -47,12 +50,12 @@ parser.on('data',(data) =>{
     const message = payload[payload.length-1]
     
     //send data to html file
-    const msgPack ={
-        timestamp:this.dateTime,
-        mobileId:this.mobileId,
-        message:this.message
+    const msgPack={
+        timestamp:string(this.dateTime),
+        mobileId:string(this.mobileId),
+        message:string(this.message)
     }
-    io.emit('chat message',(msgPack));
+    io.emit('get message',msgPack);
     
     console.log(`${dateTime} : ${mobileId} : ${message}`);
 });
