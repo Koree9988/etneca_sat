@@ -137,9 +137,10 @@
     var timestamp = x.insertCell(0);
     var mId = x.insertCell(1);
     var msg = x.insertCell(2);
-    timestamp.innerHTML=msgPack.timestamp;
-    mId.innerHTML=msgPack.mobileId;
-    msg.innerHTML=msgPack.message;
+    console.log(msgPack);
+    timestamp.innerHTML= msgPack.timestamp;
+    mId.innerHTML= msgPack.mobileId;
+    msg.innerHTML= msgPack.message;
   });
 
 </script>

@@ -50,12 +50,12 @@ parser.on('data',(data) =>{
     const message = payload[payload.length-1]
     
     //send data to html file
-    const msgPack={
-        timestamp:string(this.dateTime),
-        mobileId:string(this.mobileId),
-        message:string(this.message)
-    }
-    io.emit('get message',msgPack);
+    // const msgPack={
+    //     timestamp:this.dateTime,
+    //     mobileId:this.mobileId,
+    //     message:this.message
+    // }
+    io.emit('get message',{timestamp:'dateTime',mobileId:'mobileId',message:'message'});
     
     console.log(`${dateTime} : ${mobileId} : ${message}`);
 });
