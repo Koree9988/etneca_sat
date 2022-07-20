@@ -124,15 +124,15 @@
     }
   });
 
-  socket.on('chat message', function (msg) {
-    var item = document.createElement('li');
-    item.textContent = msg;
-    messages.appendChild(item);
-    window.scrollTo(0, document.body.scrollHeight);
-  });
+  // socket.on('chat message', function (msg) {
+  //   var item = document.createElement('li');
+  //   item.textContent = msg;
+  //   messages.appendChild(item);
+  //   window.scrollTo(0, document.body.scrollHeight);
+  // });
 
-  //get data frome socket and show all data by using table
-  socket.on('dataPack',(msgPack)=>{
+  //get data from socket and show all data by using table
+  socket.on('chat message',(msgPack)=>{
     var x=document.getElementById('tableDetail').insertRow(0);
     var timestamp = x.insertCell(0);
     var mId = x.insertCell(1);

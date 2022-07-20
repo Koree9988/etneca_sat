@@ -52,7 +52,7 @@ parser.on('data',(data) =>{
         mobileId:this.mobileId,
         message:this.message
     }
-    parsers.emit('dataPack',(msgPack));
+    io.emit('chat message',(msgPack));
     
     console.log(`${dateTime} : ${mobileId} : ${message}`);
 });
