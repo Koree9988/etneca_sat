@@ -132,16 +132,16 @@
   });
 
   //get data from socket and show all data by using table
-  socket.on('get message',(msgPack)=>{
-    var x=document.getElementById('tableDetail').insertRow(0);
-    var timestamp = x.insertCell(0);
-    var mId = x.insertCell(1);
-    var msg = x.insertCell(2);
-    console.log(msgPack);
-    timestamp.innerHTML= msgPack.timestamp;
-    mId.innerHTML= msgPack.mobileId;
-    msg.innerHTML= msgPack.message;
-  });
+  // socket.on('get message',(msgPack)=>{
+  //   var x=document.getElementById('tableDetail').insertRow(0);
+  //   var timestamp = x.insertCell(0);
+  //   var mId = x.insertCell(1);
+  //   var msg = x.insertCell(2);
+  //   console.log(msgPack);
+  //   timestamp.innerHTML= msgPack.timestamp;
+  //   mId.innerHTML= msgPack.mobileId;
+  //   msg.innerHTML= msgPack.message;
+  // });
 
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
