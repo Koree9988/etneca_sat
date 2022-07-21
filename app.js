@@ -26,9 +26,7 @@ io.on('connection', (socket) => {
         port.write('chat,'+Date.now()+',sid01,'+'rid01,'+msg)
         console.log('chat,'+Date.now()+',sid01,'+'rid01,'+msg)
     });
-    // socket.on('get message', (msg) => {
-        
-    // });
+    
 
     socket.broadcast.emit('hi');
 });
@@ -45,19 +43,19 @@ parser.on('data',(data) =>{
     if(payload.length < 2)
         return;
 
-    const dateTime = Date.now()
+    // const dateTime = Date.now()
     const mobileId = payload[payload.length-2]
     const message = payload[payload.length-1]
     
     // send data to html file
-    const msgPack={
-        timestamp:this.dateTime,
-        mobileId:this.mobileId,
-        message:this.message
-    }
-    io.emit('get message',msgPack);
+    // const msgPack={
+    //     timestamp:this.dateTime,
+    //     mobileId:this.mobileId,
+    //     message:this.message
+    // }
+    // io.emit('get message',msgPack);
     
-    console.log(`${dateTime} : ${mobileId} : ${message}`);
+    console.log(`${Date.now()} : ${mobileId} : ${message}`);
 });
 
 // serialPort.on('readable', function () {
