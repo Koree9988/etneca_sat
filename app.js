@@ -53,7 +53,7 @@ parser.on('data',(data) =>{
     //     mobileId:this.mobileId,
     //     message:this.message
     // }
-    // io.emit('get message',msgPack);
+    io.emit('get message',data);
     
     console.log(`${Date.now()} : ${mobileId} : ${message}`);
 });
@@ -71,7 +71,7 @@ parser.on('data',(data) =>{
 //     });
 
 
-server.listen(3000, () => {
+server.listen(3001, () => {
   console.log('listening on *:3000');
 });
 
